@@ -1,0 +1,12 @@
+stacy_mark_main:
+    resource: "@StacyMarkMainBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+_user_bundle:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+StacyMarkMainBundle_editor:
+  resource: "@StacyMarkMainBundle/Resources/config/routing/editor.yml"
+  prefix: /editor
+  

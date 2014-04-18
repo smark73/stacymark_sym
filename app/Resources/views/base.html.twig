@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Stacy Mark - Art - Paintings{% endblock %}</title>
+        <meta name="description" content="{% block metadescription %}{% endblock %}" />
+        <meta name="keywords" content="{% block keywords %}{% endblock %}" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block styles %}
+            <link href='http://fonts.googleapis.com/css?family=Krona+One|Hammersmith+One' rel='stylesheet' type='text/css'>
+            <link type="text/css" rel="stylesheet" href="{{ asset('css/styles.css')}}" />
+        {% endblock %}         
+        {% block js %}
+        <!--[if lt IE 9]>
+            <script src="{{ asset('scripts/html5shiv.js') }}"></script>
+        <![endif]-->
+        {% endblock %}
+    </head>
+    <body class="centered row">
+        {% block header %}
+        {% endblock %}
+        {% block content %}
+        {% endblock %}
+        {% block footer %}
+        {% endblock %}
+        {% block js_btm %}
+        {% endblock %} 
+    </body>
+</html>

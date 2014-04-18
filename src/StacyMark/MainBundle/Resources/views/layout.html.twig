@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+        {% block header %}
+            <header class="row centered">
+                <nav class="row centered">
+                    <div class="hdr-title col">
+                        <a href="{{ path('stacymark_index') }}">
+                            <span class="krona light">STACY MARK  |  </span><span class="krona dark">PAINTINGS</span>
+                        </a>
+                    </div>
+                    {#<ul class="menu col">     
+                      <a href="{{ path('stacymark_g1') }}" id="mnutab1">{% if g=="1" %}<li class="tabON">{% else %}<li class="tabHOV">{% endif %}GALLERY 1</li></a>
+                      <a href="{{ path('stacymark_g2') }}"id="mnutab2">{% if g=="2" %}<li class="tabON">{% else %}<li class="tabHOV">{% endif %}GALLERY 2</li></a>
+                      <a href="{{ path('stacymark_g3') }}" id="mnutab3">{% if g=="3" %}<li class="tabON">{% else %}<li class="tabHOV">{% endif %}GALLERY 3</li></a>
+                      <a href="{{ path('stacymark_g4') }}" id="mnutab4">{% if g=="4" %}<li class="tabON">{% else %}<li class="tabHOV">{% endif %}GALLERY 4</li></a>
+                    </ul>#}
+                </nav>
+                <br class="clear"/>
+            </header>
+        {% endblock %}
+
+        {# block footer %}
+        <footer class="centered row">
+            <div style="width:300px;display:block;margin:0 auto;text-align:center;" class="row contactArea">
+            <form id="contactform" name="contactform" action="form-send.php" class="col one-edge-shadow">
+                Name:<br/><input type="text" id="name" name="name" class="required" size="29" style="border:1px solid #999274;"><br/>
+                Email:<br/><input type="text" id="email" name="email" class="required" size="29" style="border:1px solid #999274;"><br/>
+                <input type="text" id="feedme" size="25" class="feedme">
+                Comments:<br/><textarea id="comments" name="comments" class="required"></textarea><br/>
+                <input type="submit" id="submit" name="submit" value="Send" style="float:right;margin-right:20px;">
+                <p style="clear:both;margin-top:20px;"><a class="contactBtn">Close</a></p>
+                <div id="result"></div>
+            </form>
+            </div>
+            <div id="contact" class="row centered">
+                    <div class="centered row" style="width:50%;height:35px;">#}{# <a class="contactBtn">Contact Stacy</a> &nbsp; | &nbsp;#}{# &copy All Rights Reserved</div>
+            </div>
+        </footer>
+        {% endblock #}

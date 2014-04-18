@@ -1,0 +1,432 @@
+/* 
+	RESET - ADAPTED FROM MEYER RESET
+	URL - http://meyerweb.com/eric/tools/css/reset/
+	LICENSE - PUBLIC DOMAIN
+*/
+/* RESET
+----------------------------------------------------------------------------------------------------*/
+a, abbr, acronym, address, applet, article, aside, audio, 
+b, big, blockquote, body, caption, canvas, center, cite, code,
+dd, del, details, dfn, dialog, div, dl, dt, em, embed, 
+fieldset, figcaption, figure, form, footer, 
+header, hgroup, h1, h2, h3, h4, h5, h6, html, 
+i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, output, p, pre, q, ruby, 
+s, samp, section, small, span, strike, strong, sub, summary, sup, 
+tt, table, tbody, textarea, tfoot, thead, time, tr, th, td,
+u, ul, var, video  { 
+                font-family: inherit; 
+                font-size: 100%; 
+                font-weight: inherit; 
+                font-style: inherit; 
+                vertical-align: baseline; 
+                white-space: normal;
+                text-align: left; 
+                margin: 0; 
+                padding: 0; 
+                border: 0; 
+                outline: 0;
+                background: transparent; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section { display: block; }							  
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+:focus { outline: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+/* END RESET */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background: #7b6f55 url('../images/bg-tile.jpg') top left repeat-x;
+	font-size:10px;
+	font-weight:bold;
+	color:#999274;
+}
+.gradient{
+	background: #7b6f55; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #7b6f55 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#7b6f55)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#7b6f55 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7b6f55',GradientType=0 ); /* IE6-9 */
+}
+a img {
+	border: none;
+}
+a, a:visited{
+    	color:#413400;
+}
+.centered {
+	display:block;
+	margin:0 auto;
+	text-align:center;
+}
+.clear{
+	clear:both;
+}
+.krona{
+	font-family: 'Krona One';
+}
+.hammersmith{
+	font-family: 'Hammersmith One';
+}
+.light{
+	color:#999274;
+}
+.dark{
+	color:#574f3b;	
+}
+header {
+    margin:0 auto;
+    padding:5px 0;
+        // hide width 50% to center title when not showing menu tabs
+    // width:50%\9; /*ie8 and below*/
+}
+div.hdr-title{
+    // when not showing menu tabs
+    // margin-top:6px;
+    //text-align:right;
+    width:100%;
+    margin:1% auto;
+    text-align:center;
+}
+.hdr-title a{
+    text-decoration:none;
+    font-size:14px;
+    text-shadow:1px 1px 1px #bfb7a7;
+}
+.container {
+	width:95%;
+}
+footer {
+	text-align:center;
+	color:#413400;
+	position:relative;
+}
+footer a{
+	color:#413400;
+	text-decoration:none;
+}
+nav {
+	height:22px;
+}
+.menu li {
+	width:60px;
+	height:22px;
+	display:inline-block;
+	margin:4px 0 0;
+	cursor:pointer;
+	text-align:center;
+	line-height:22px;
+	vertical-align:middle;
+	font-family: 'Hammersmith One';
+	font-size:11px;
+	font-weight:400;
+	text-shadow: 0 0 1px #bfb7a7;
+}
+.tabON{
+	border-left:1px solid #dedbd5;
+	border-top:1px solid #dedbd5;
+	border-right:1px solid #dedbd5;
+	border-bottom:1px solid #dedbd5;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	   -moz-border-radius: 3px 3px 3px 3px;
+	    	    border-radius: 3px 3px 3px 3px;
+	background-color:#fff;
+	color:#413400;
+}
+li:hover.tabHOV{
+	border:1px solid #fff;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	   -moz-border-radius: 3px 3px 3px 3px;
+	    	    border-radius: 3px 3px 3px 3px;
+	background-color:#edebe6;
+	margin:4px -1px 0;
+}
+.underline {
+	opacity:0;
+	width:100%;
+	height:100%;
+	background-image:url('images/underline.png');
+	background-position:bottom left;
+	background-repeat:no-repeat;
+}
+.visible {
+	visibility:visible;
+	display:block;
+}
+.invisible {
+	visibility:hidden;
+	display:none;
+}
+.one-edge-shadow {
+	-webkit-box-shadow: 0 10px 20px -10px black;
+	  -moz-box-shadow: 0 10px 20px -10px black;
+			 box-shadow: 0 10px 20px -10px black;
+}
+#contact{
+	width:100%;
+	height:50px;
+}
+#contactform{
+	z-index:100;
+	width:280px;
+	margin:0 auto 20px;
+	padding:5px 0 0 15px;
+	text-align:left;
+	position:absolute;
+	height:0;
+	bottom:0;
+	color:#413400;
+	filter: Alpha(Opacity=0); /* IE7 */
+	opacity:0;
+	background-color:#edebe6;
+}
+#contactform textarea{
+	border:1px solid#999274;
+	background-color:#fff;
+	font-weight:normal;
+	color:#000;
+	font-family:Arial, sans-serif;
+	font-size:12px;
+	width:241px;
+	height:75px;
+}
+.contactBtn{
+	cursor:pointer;
+}
+.feedme{
+	display:none;
+	visibility:hidden;
+	height:0;
+	width:0;
+}
+.warning, .error {
+	color:#c00;
+}
+/*#tab-content{
+	position:relative;
+}*/
+#ptg-content{
+	position:relative;
+}
+
+/* ==================== EDITOR =====================
+   =============================================*/
+div.editor{
+    font-size:1.4em;
+    line-height:2;
+}
+span.table-hdr{
+    color:#000;
+    text-decoration:underline;
+}
+
+
+/* ------- begin content switcher ---------*/
+.thumbs {
+	margin:10px auto 20px auto;
+}
+.thumbs a{
+	cursor: pointer;
+	height:75px;
+                text-decoration:none;
+}
+.thumbs a image{
+    text-decoration:none;
+}
+#ptgs{
+    	margin:0 auto;
+	text-align:center;
+}
+p.ptg-info{
+	font-size:10px;
+	font-weight:bold;
+	color:#413400;
+	margin:4px auto;
+	padding:2px;
+	text-align:center;
+}
+p.ptg-info span{
+	color:#e6d798;
+	padding:2px;
+}
+#ptgs img{
+	margin:0 auto;
+	max-width:100%;
+	height:auto;
+}
+/*
+.switcher-content {
+	display: none;
+}
+#switcher-panel p{
+	font-size:10px;
+	font-weight:bold;
+	color:#413400;
+	margin:4px auto;
+	padding:2px;
+	text-align:center;
+}
+#switcher-panel p span{
+	color:#e6d798;
+	padding:2px;
+}
+#switcher-panel img{
+	margin:0 auto;
+	max-width:100%;
+	height:auto;
+}
+*/
+/* ------- end content switcher ---------*/
+
+
+
+/* ==================== RESPONSIVE =====================
+   =================================================*/
+/*!
+ * Gridpak Beta CSS
+ *
+ * Generator - http://gridpak.com/
+ * Created by @erskinedesign
+ */
+
+/* Reusable column setup */
+.col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+
+
+    /* 1. 2 Column Grid 0px - 599px 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    49.0%
+    Span 2:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 0px) and (max-width: 599px) {
+        
+        .col {
+            margin-left:2%;
+        	padding:0 1.5%;
+        }
+        
+        .row .col:first-child {
+            margin-left:0;
+        }
+        
+        
+        /*
+        Add your semantic classnames in alongside their corresponding spans here. e.g.
+        
+        .span_3,
+        .my_semantic_class_name {
+            ...
+        }
+        */
+        
+        .span_1 {
+            width:49.0%;
+        }
+        .span_2,
+		header,
+		nav,
+		.hdr-title,
+		.menu,
+		.thumbs,
+		.gallery,
+		.contact-area,
+		footer
+		 {
+            margin-left:0;
+            width:100%;
+        }
+		div.hdr-title, .menu{
+			clear:both;
+			text-align:center;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		.switcher-content img{
+			max-width:100%;
+			height:auto;
+		}
+			
+    }
+
+    /* 2. 6 Column Grid 600px - Infinity 
+    ----------------------------------------------------------------------------- 
+    
+    Span 1:    15.0%
+    Span 2:    32.0%
+    Span 3:    49.0%
+    Span 4:    66.0%
+    Span 5:    83.0%
+    Span 6:    100%
+    
+    ----------------------------------------------------------------------------- */
+
+    @media screen and (min-width: 600px) {
+        
+        .col {
+            margin-left:2%;
+        	padding:0 1.5%;
+        }
+        
+        .row .col:first-child {
+            margin-left:0;
+        }
+        
+        
+        
+        .span_1 {
+            width:15.0%;
+        }
+        .span_2 {
+            width:32.0%;
+        }
+        .span_3,
+		.menu,
+		.hdr-title
+		 {
+            width:49.0%;
+        }
+        .span_4 {
+            width:66.0%;
+        }
+        .span_5 {
+            width:83.0%;
+        }
+        .span_6,
+		header,
+		nav,
+		.thumbs,
+		.gallery,
+		.contact-area,
+		footer
+		 {
+            margin-left:0;
+            width:100%;
+        }
+		.hdr-title img{
+			float:right;
+		}
+		.menu{
+			float:left;
+			margin-left:-15px;
+		}
+    }
+
+
