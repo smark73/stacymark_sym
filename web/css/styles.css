@@ -219,14 +219,18 @@ li:hover.tabHOV{
 div.editor{
     font-size:1.4em;
     line-height:2;
+    width:90%;
+    margin:auto;
 }
 span.table-hdr{
     color:#000;
     text-decoration:underline;
 }
 
+#stacymark_mainbundle_paintingtype div input{ width:300px; }
 
-/* ------- begin content switcher ---------*/
+/* -------------------------------------------------------------------------------------------------------------*/
+
 .thumbs {
 	margin:10px auto 20px auto;
 }
@@ -259,29 +263,6 @@ p.ptg-info span{
 	max-width:100%;
 	height:auto;
 }
-/*
-.switcher-content {
-	display: none;
-}
-#switcher-panel p{
-	font-size:10px;
-	font-weight:bold;
-	color:#413400;
-	margin:4px auto;
-	padding:2px;
-	text-align:center;
-}
-#switcher-panel p span{
-	color:#e6d798;
-	padding:2px;
-}
-#switcher-panel img{
-	margin:0 auto;
-	max-width:100%;
-	height:auto;
-}
-*/
-/* ------- end content switcher ---------*/
 
 
 

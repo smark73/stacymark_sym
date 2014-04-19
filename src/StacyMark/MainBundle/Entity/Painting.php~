@@ -3,10 +3,12 @@
 namespace StacyMark\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints AS Assert;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="ptg_details")
+ * @ORM\HasLifecycleCallbacks
  */
 class Painting
 {
@@ -16,6 +18,25 @@ class Painting
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+    
+    /**
+     * Image path
+     * @var string
+     * @ORM\Column(type="text", length=255, nullable=false)
+     */
+    protected $path;
+    
+    /**
+     * Image file
+     * @var File
+     * @Assert\File(
+     *      maxSize = "5M",
+     *      mimeTypes = {"image/jpeg", "image/gif", "image/png", "image/tiff"},
+     *      maxSizeMessage = "The maximum allowed file size is 5MB.",
+     *      mimeTypesMessage = "Only image filetypes are allowed."
+     * )
+     */
+    protected $file;
 
     /**
      * @ORM\Column (type="string")

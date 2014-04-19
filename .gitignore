@@ -3,6 +3,8 @@
 /app/logs/*
 /vendor/
 /app/config/parameters.yml
+composer.phar
+netbeans
 # Netbeans Specific #
 /nbproject/private/
 build/
@@ -11,3 +13,4 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+

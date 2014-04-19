@@ -1,48 +1,13 @@
-stacymark_default:
-    pattern:  /
-    defaults: { _controller: StacyMarkMainBundle:Page:default }
-    requirements:
-      _method: GET|POST
-      
 stacymark_index:
     pattern:  /
-    defaults: { _controller: StacyMarkMainBundle:Page:index }
+    defaults: { _controller: StacyMarkMainBundle:Page:index, id: 1 }
     requirements:
-      _method: GET|POST
-
-_stacymark_gallery:
-    resource: "@StacyMarkMainBundle/Controller/PageController.php"
-    type:     annotation
-
-stacymark_g1:
-  pattern: /gallery/1/paintings
-  defaults: { _controller: StacyMarkMainBundle:Page:index }
-  requirements:
-      _method: GET|POST
-
-stacymark_g2:
-  pattern: /gallery/2/paintings
-  defaults: { _controller: StacyMarkMainBundle:Page:index }
-  requirements:
-      _method: GET|POST
-
-stacymark_g3:
-  pattern: /gallery/3/paintings
-  defaults: { _controller: StacyMarkMainBundle:Page:index }
-  requirements:
-      _method: GET|POST
-
-stacymark_g4:
-  pattern: /gallery/{g}/painting/{id}
-  defaults: { _controller: StacyMarkMainBundle:Page:show, g: 4, id: 1 }
-  requirements:
       _method: GET|POST
       id: \d+
       
 stacymark_paintings:
   pattern: /painting/{id}
-  defaults: { _controller: StacyMarkMainBundle:Page:showptg, id: 1 }
+  defaults: { _controller: StacyMarkMainBundle:Page:index, id: 1 }
   requirements:
       _method: GET|POST
       id: \d+
-      

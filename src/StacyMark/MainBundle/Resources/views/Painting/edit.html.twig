@@ -1,6 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block content %}
+<div class="editor">
     <h1>Painting edit</h1>
 
     <form action="{{ path('painting_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
@@ -11,18 +12,19 @@
         </p>
     </form>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('painting') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('painting_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('painting') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <form action="{{ path('painting_delete', { 'id': entity.id }) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE" />
+                {{ form_widget(delete_form) }}
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+</div>
 {% endblock %}
