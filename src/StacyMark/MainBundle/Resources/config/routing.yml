@@ -1,13 +1,11 @@
 stacymark_index:
     pattern:  /
-    defaults: { _controller: StacyMarkMainBundle:Page:index, id: 1 }
+    defaults: { _controller: StacyMarkMainBundle:Page:index, title: '1959 Martin' }
     requirements:
       _method: GET|POST
-      id: \d+
-      
+
 stacymark_paintings:
-  pattern: /painting/{id}
-  defaults: { _controller: StacyMarkMainBundle:Page:index, id: 1 }
+  pattern: /painting/{title}
+  defaults: { _controller: StacyMarkMainBundle:Page:index, title: '1959 Martin' }
   requirements:
       _method: GET|POST
-      id: \d+

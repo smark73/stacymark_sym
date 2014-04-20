@@ -3,12 +3,14 @@
 namespace StacyMark\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints AS Assert;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="ptg_details")
- * @ORM\HasLifecycleCallbacks
+ * @Vich\Uploadable
  */
 class Painting
 {
@@ -18,35 +20,42 @@ class Painting
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
-    /**
-     * Image path
-     * @var string
-     * @ORM\Column(type="text", length=255, nullable=false)
-     */
-    protected $path;
-    
-    /**
-     * Image file
-     * @var File
-     * @Assert\File(
-     *      maxSize = "5M",
-     *      mimeTypes = {"image/jpeg", "image/gif", "image/png", "image/tiff"},
-     *      maxSizeMessage = "The maximum allowed file size is 5MB.",
-     *      mimeTypesMessage = "Only image filetypes are allowed."
-     * )
-     */
-    protected $file;
 
     /**
-     * @ORM\Column (type="string")
+     * @Assert\File(
+     *     maxSize="1M",
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     * )
+     * @Vich\UploadableField(mapping="ptg_image", fileNameProperty="imageName")
+     *
+     * @var File $image
      */
     protected $image;
     
-     /**
-     * @ORM\Column (type="string")
+    /**
+     * @ORM\Column(type="string", length=255, name="image_name")
+     *
+     * @var string $imageName
+     */
+    protected $imageName;
+    
+    /**
+     * @Assert\File(
+     *     maxSize="1M",
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     * )
+     * @Vich\UploadableField(mapping="ptg_thumb", fileNameProperty="thumbName")
+     *
+     * @var File $image
      */
     protected $thumb;
+    
+    /**
+     * @ORM\Column(type="string", length=255, name="thumb_name")
+     *
+     * @var string $thumbName
+     */
+    protected $thumbName;
     
     /**
      * @ORM\Column (type="string")
@@ -201,11 +210,16 @@ class Painting
 
     /**
      * Set image
-     *
-     * @param string $image
-     * @return Painting
+     * 
+     * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
+     * of 'UploadedFile' is injected into this setter to trigger the  update. If this
+     * bundle's configuration parameter 'inject_on_load' is set to 'true' this setter
+     * must be able to accept an instance of 'File' as the bundle will inject one here
+     * during Doctrine hydration.
+     * 
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
      */
-    public function setImage($image)
+    public function setImage(File $image)
     {
         $this->image = $image;
     
@@ -215,7 +229,7 @@ class Painting
     /**
      * Get image
      *
-     * @return string 
+     * @return File
      */
     public function getImage()
     {
@@ -223,12 +237,33 @@ class Painting
     }
 
     /**
-     * Set thumb
-     *
-     * @param string $thumb
-     * @return Painting
+     * @param string $imageName
      */
-    public function setThumb($thumb)
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
+    }
+    
+    /**
+     * Set thumb
+     * 
+     * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
+     * of 'UploadedFile' is injected into this setter to trigger the  update. If this
+     * bundle's configuration parameter 'inject_on_load' is set to 'true' this setter
+     * must be able to accept an instance of 'File' as the bundle will inject one here
+     * during Doctrine hydration.
+     * 
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $thumb
+     */
+    public function setThumb(File $thumb)
     {
         $this->thumb = $thumb;
     
@@ -244,27 +279,20 @@ class Painting
     {
         return $this->thumb;
     }
-
-    /**
-     * Set path
-     *
-     * @param string $path
-     * @return Painting
-     */
-    public function setPath($path)
-    {
-        $this->path = $path;
     
-        return $this;
+    /**
+     * @param string $thumbName
+     */
+    public function setThumbName($thumbName)
+    {
+        $this->thumbName = $thumbName;
     }
 
     /**
-     * Get path
-     *
-     * @return string 
+     * @return string
      */
-    public function getPath()
+    public function getThumbName()
     {
-        return $this->path;
+        return $this->thumbName;
     }
 }

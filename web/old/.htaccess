@@ -1,5 +1,0 @@
-#Rewrite to www
-Options +FollowSymLinks
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^google.com[nc]
-RewriteRule ^(.*)$ http://www.google.com/

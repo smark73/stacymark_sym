@@ -69,3 +69,37 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: StacyMark\UserBundle\Entity\User
+    
+# file uploads for gallery
+
+knp_gaufrette:
+    stream_wrapper: ~
+    adapters:
+        ptg_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/gallery
+        thumb_adapter:
+            local:
+                directory: %kernel.root_dir%/../web/gallery
+    filesystems:
+        ptg_image_fs:
+            adapter:    ptg_adapter
+        thumb_image_fs:
+            adapter:    thumb_adapter
+
+vich_uploader:
+    db_driver: orm
+    #gaufrette: true
+    #storage:   vich_uploader.storage.gaufrette
+    mappings:
+        ptg_image:
+            uri_prefix:         /gallery
+            upload_destination: %kernel.root_dir%/../web/gallery
+            delete_on_remove: true
+            delete_on_update: true
+        ptg_thumb:
+            uri_prefix:         /gallery
+            upload_destination: %kernel.root_dir%/../web/gallery
+            delete_on_remove: true
+            delete_on_update: true
+            

@@ -10,20 +10,25 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class PageController extends Controller
 { 
-    
-        public function indexAction($id){
+              
+       public function indexAction($title){
+           $title = str_replace('-', ' ', $title);
+
            $em = $this->getDoctrine()
                    ->getManager();
            
+           // selected painting
            $painting = $em->getRepository('StacyMarkMainBundle:Painting')
-                   ->find($id);
+                   ->findOneBy(array('title' => $title));
            
+           //thumbs
            $paintings = $em->createQueryBuilder()
                    ->select(array('p'))
                    ->from('StacyMarkMainBundle:Painting', 'p')
                    ->addOrderBy('p.title', 'ASC')
                    ->getQuery()
                    ->getResult();
+           
                    
            if(!$paintings){
                throw $this->createNotFoundException('Unable to find painting data');
@@ -34,7 +39,6 @@ class PageController extends Controller
                'painting' => $painting
            ));
        }
-               
 }
 
 

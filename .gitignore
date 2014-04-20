@@ -1,16 +1,8 @@
 /web/bundles/
+/web/inc/
+/web/old/
 /app/cache/*
 /app/logs/*
 /vendor/
 /app/config/parameters.yml
-composer.phar
-netbeans
-# Netbeans Specific #
-/nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-
+/nbproject/

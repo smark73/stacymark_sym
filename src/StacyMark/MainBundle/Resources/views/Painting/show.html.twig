@@ -16,11 +16,11 @@
             </tr>
             <tr>
                 <th>Image</th>
-                <td>{{ entity.image }}</td>
+                <td><img src="{{ vich_uploader_asset(entity, 'image') }}" alt="{{ entity.title }}" width="50" height="50"/></td>
             </tr>
             <tr>
                 <th>Thumb</th>
-                <td>{{ entity.thumb }}</td>
+                <td><img src="{{ vich_uploader_asset(entity, 'thumb') }}" alt="{{ entity.title }}" width="50" height="50" /></td>
             </tr>
             <tr>
                 <th>Title</th>

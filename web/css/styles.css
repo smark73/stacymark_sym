@@ -1,7 +1,7 @@
 /* 
-	RESET - ADAPTED FROM MEYER RESET
-	URL - http://meyerweb.com/eric/tools/css/reset/
-	LICENSE - PUBLIC DOMAIN
+    RESET - ADAPTED FROM MEYER RESET
+    URL - http://meyerweb.com/eric/tools/css/reset/
+    LICENSE - PUBLIC DOMAIN
 */
 /* RESET
 ----------------------------------------------------------------------------------------------------*/
@@ -34,54 +34,38 @@ ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 :focus { outline: 0; }
 table { border-collapse: collapse; border-spacing: 0; }
-/* END RESET */
+/* ------- END RESET ----------*/
 
+html,
+body{ height:100%;overflow:auto}
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	background: #7b6f55 url('../images/bg-tile.jpg') top left repeat-x;
-	font-size:10px;
-	font-weight:bold;
-	color:#999274;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size:0.8em;
+    font-weight:bold;
+    color:#999274;
 }
+.container {width:100%;height:100%;overflow:visible}
 .gradient{
-	background: #7b6f55; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 0%, #7b6f55 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#7b6f55)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#7b6f55 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7b6f55',GradientType=0 ); /* IE6-9 */
+    background: #7b6f55; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #7b6f55 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#7b6f55)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#7b6f55 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#7b6f55 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7b6f55',GradientType=0 ); /* IE6-9 */
 }
-a img {
-	border: none;
-}
-a, a:visited{
-    	color:#413400;
-}
-.centered {
-	display:block;
-	margin:0 auto;
-	text-align:center;
-}
-.clear{
-	clear:both;
-}
-.krona{
-	font-family: 'Krona One';
-}
-.hammersmith{
-	font-family: 'Hammersmith One';
-}
-.light{
-	color:#999274;
-}
-.dark{
-	color:#574f3b;	
-}
+a img {border: none}
+a, a:visited{color:#413400}
+.img-responsive{width:100%;height:auto}
+.centered {display:block;margin:0 auto;text-align:center}
+.clear{clear:both}
+.krona{font-family: 'Krona One'}
+.hammersmith{font-family: 'Hammersmith One'}
+.light{color:#999274}
+.dark{color:#574f3b}
 header {
     margin:0 auto;
-    padding:5px 0;
         // hide width 50% to center title when not showing menu tabs
     // width:50%\9; /*ie8 and below*/
 }
@@ -98,176 +82,153 @@ div.hdr-title{
     font-size:14px;
     text-shadow:1px 1px 1px #bfb7a7;
 }
-.container {
-	width:95%;
-}
 footer {
-	text-align:center;
-	color:#413400;
-	position:relative;
+    text-align:center;
+    color:#413400;
+    position:relative;
 }
 footer a{
-	color:#413400;
-	text-decoration:none;
-}
-nav {
-	height:22px;
-}
-.menu li {
-	width:60px;
-	height:22px;
-	display:inline-block;
-	margin:4px 0 0;
-	cursor:pointer;
-	text-align:center;
-	line-height:22px;
-	vertical-align:middle;
-	font-family: 'Hammersmith One';
-	font-size:11px;
-	font-weight:400;
-	text-shadow: 0 0 1px #bfb7a7;
-}
-.tabON{
-	border-left:1px solid #dedbd5;
-	border-top:1px solid #dedbd5;
-	border-right:1px solid #dedbd5;
-	border-bottom:1px solid #dedbd5;
-	-webkit-border-radius: 3px 3px 3px 3px;
-	   -moz-border-radius: 3px 3px 3px 3px;
-	    	    border-radius: 3px 3px 3px 3px;
-	background-color:#fff;
-	color:#413400;
-}
-li:hover.tabHOV{
-	border:1px solid #fff;
-	-webkit-border-radius: 3px 3px 3px 3px;
-	   -moz-border-radius: 3px 3px 3px 3px;
-	    	    border-radius: 3px 3px 3px 3px;
-	background-color:#edebe6;
-	margin:4px -1px 0;
-}
-.underline {
-	opacity:0;
-	width:100%;
-	height:100%;
-	background-image:url('images/underline.png');
-	background-position:bottom left;
-	background-repeat:no-repeat;
-}
-.visible {
-	visibility:visible;
-	display:block;
-}
-.invisible {
-	visibility:hidden;
-	display:none;
-}
-.one-edge-shadow {
-	-webkit-box-shadow: 0 10px 20px -10px black;
-	  -moz-box-shadow: 0 10px 20px -10px black;
-			 box-shadow: 0 10px 20px -10px black;
-}
-#contact{
-	width:100%;
-	height:50px;
-}
-#contactform{
-	z-index:100;
-	width:280px;
-	margin:0 auto 20px;
-	padding:5px 0 0 15px;
-	text-align:left;
-	position:absolute;
-	height:0;
-	bottom:0;
-	color:#413400;
-	filter: Alpha(Opacity=0); /* IE7 */
-	opacity:0;
-	background-color:#edebe6;
-}
-#contactform textarea{
-	border:1px solid#999274;
-	background-color:#fff;
-	font-weight:normal;
-	color:#000;
-	font-family:Arial, sans-serif;
-	font-size:12px;
-	width:241px;
-	height:75px;
-}
-.contactBtn{
-	cursor:pointer;
-}
-.feedme{
-	display:none;
-	visibility:hidden;
-	height:0;
-	width:0;
-}
-.warning, .error {
-	color:#c00;
-}
-/*#tab-content{
-	position:relative;
-}*/
-#ptg-content{
-	position:relative;
+    color:#413400;
+    text-decoration:none;
 }
 
-/* ==================== EDITOR =====================
-   =============================================*/
+/* ============ NAVIGATION ============ */
+nav {height:22px}
+.menu li {
+    width:60px;
+    height:22px;
+    display:inline-block;
+    margin:4px 0 0;
+    cursor:pointer;
+    text-align:center;
+    line-height:22px;
+    vertical-align:middle;
+    font-family: 'Hammersmith One';
+    font-size:11px;
+    font-weight:400;
+    text-shadow: 0 0 1px #bfb7a7;
+}
+.tabON{
+    border-left:1px solid #dedbd5;
+    border-top:1px solid #dedbd5;
+    border-right:1px solid #dedbd5;
+    border-bottom:1px solid #dedbd5;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    background-color:#fff;
+    color:#413400;
+}
+li:hover.tabHOV{
+    border:1px solid #fff;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+    background-color:#edebe6;
+    margin:4px -1px 0;
+}
+.underline {
+    opacity:0;
+    width:100%;
+    height:100%;
+    background-image:url('images/underline.png');
+    background-position:bottom left;
+    background-repeat:no-repeat;
+}
+/* -------------------------------------------------------------------------------------------------------------*/
+
+/* ============ CONTACT FORM ==============*/
+.visible {
+    visibility:visible;
+    display:block;
+}
+.invisible {
+    visibility:hidden;
+    display:none;
+}
+.one-edge-shadow {
+    -webkit-box-shadow: 0 10px 20px -10px black;
+      -moz-box-shadow: 0 10px 20px -10px black;
+        box-shadow: 0 10px 20px -10px black;
+}
+#contact{
+    width:100%;
+    height:50px;
+}
+#contactform{
+    z-index:100;
+    width:280px;
+    margin:0 auto 20px;
+    padding:5px 0 0 15px;
+    text-align:left;
+    position:absolute;
+    height:0;
+    bottom:0;
+    color:#413400;
+    filter: Alpha(Opacity=0); /* IE7 */
+    opacity:0;
+    background-color:#edebe6;
+}
+#contactform textarea{
+    border:1px solid#999274;
+    background-color:#fff;
+    font-weight:normal;
+    color:#000;
+    font-family:Arial, sans-serif;
+    font-size:12px;
+    width:241px;
+    height:75px;
+}
+.contactBtn{
+    cursor:pointer;
+}
+.feedme{
+    display:none;
+    visibility:hidden;
+    height:0;
+    width:0;
+}
+.warning, .error {
+    color:#c00;
+}
+/*-------------------------------------------------------------------*/
+
+/* ==================== EDITOR =====================*/
+
 div.editor{
     font-size:1.4em;
     line-height:2;
     width:90%;
     margin:auto;
+    color:#554b32;
 }
 span.table-hdr{
     color:#000;
     text-decoration:underline;
 }
-
 #stacymark_mainbundle_paintingtype div input{ width:300px; }
+
+div.editor table td{padding:5px;border:1px dashed #554b32}
 
 /* -------------------------------------------------------------------------------------------------------------*/
 
-.thumbs {
-	margin:10px auto 20px auto;
-}
-.thumbs a{
-	cursor: pointer;
-	height:75px;
-                text-decoration:none;
-}
-.thumbs a image{
-    text-decoration:none;
-}
-#ptgs{
-    	margin:0 auto;
-	text-align:center;
-}
-p.ptg-info{
-	font-size:10px;
-	font-weight:bold;
-	color:#413400;
-	margin:4px auto;
-	padding:2px;
-	text-align:center;
-}
-p.ptg-info span{
-	color:#e6d798;
-	padding:2px;
-}
-#ptgs img{
-	margin:0 auto;
-	max-width:100%;
-	height:auto;
-}
+/* ============== IMAGES ==============*/
+.thumbs {	margin:1% auto}
+.thumbs a{cursor: pointer;height:75px;text-decoration:none;margin:0 5px}
+.thumbs a image{text-decoration:none}
+#ptg-content{position:relative}
+#ptgs{margin:0 auto;text-align:center}
+.info{width:100%;background:#000;padding:1% 0 2%;clear:both}
+p.ptg-info1, p.ptg-info2 {font-weight:600;margin:1% auto;text-align:center}
+p.ptg-info1 {color:#e6d798;font-size:1.4em}
+p.ptg-info1 span{font-size:0.8em;color:#635729}
+p.ptg-info2 {color:#635729;font-size:1em}
+#ptgs img{margin:0 1%;max-width:600px;max-height:600px;margin-bottom:1%}
+.copyright{font-size:0.9em;font-weight:400;color:#333;margin:1% auto}
 
+/*-----------------------------------------------------------------------------------------*/
 
-
-/* ==================== RESPONSIVE =====================
-   =================================================*/
+/* ==================== RESPONSIVE ====================*/
 /*!
  * Gridpak Beta CSS
  *
@@ -287,8 +248,6 @@ p.ptg-info span{
     background-clip:padding-box !important;
 }
 
-
-
     /* 1. 2 Column Grid 0px - 599px 
     ----------------------------------------------------------------------------- 
     
@@ -303,11 +262,9 @@ p.ptg-info span{
             margin-left:2%;
         	padding:0 1.5%;
         }
-        
         .row .col:first-child {
             margin-left:0;
         }
-        
         
         /*
         Add your semantic classnames in alongside their corresponding spans here. e.g.
@@ -322,28 +279,28 @@ p.ptg-info span{
             width:49.0%;
         }
         .span_2,
-		header,
-		nav,
-		.hdr-title,
-		.menu,
-		.thumbs,
-		.gallery,
-		.contact-area,
-		footer
-		 {
+        header,
+        nav,
+        .hdr-title,
+        .menu,
+        .thumbs,
+        .gallery,
+        .contact-area,
+        footer
+         {
             margin-left:0;
             width:100%;
         }
-		div.hdr-title, .menu{
-			clear:both;
-			text-align:center;
-			margin-left: auto;
-			margin-right:auto;
-		}
-		.switcher-content img{
-			max-width:100%;
-			height:auto;
-		}
+        div.hdr-title, .menu{
+                clear:both;
+                text-align:center;
+                margin-left: auto;
+                margin-right:auto;
+        }
+        .switcher-content img{
+                max-width:100%;
+                height:auto;
+        }
 			
     }
 
@@ -363,15 +320,11 @@ p.ptg-info span{
         
         .col {
             margin-left:2%;
-        	padding:0 1.5%;
+            padding:0 1.5%;
         }
-        
         .row .col:first-child {
             margin-left:0;
         }
-        
-        
-        
         .span_1 {
             width:15.0%;
         }
@@ -379,9 +332,9 @@ p.ptg-info span{
             width:32.0%;
         }
         .span_3,
-		.menu,
-		.hdr-title
-		 {
+        .menu,
+        .hdr-title
+         {
             width:49.0%;
         }
         .span_4 {
@@ -391,23 +344,25 @@ p.ptg-info span{
             width:83.0%;
         }
         .span_6,
-		header,
-		nav,
-		.thumbs,
-		.gallery,
-		.contact-area,
-		footer
-		 {
+        header,
+        nav,
+        .thumbs,
+        .gallery,
+        .contact-area,
+        footer
+        {
             margin-left:0;
             width:100%;
         }
-		.hdr-title img{
-			float:right;
-		}
-		.menu{
-			float:left;
-			margin-left:-15px;
-		}
+        .hdr-title img
+        {
+            float:right;
+        }
+        .menu
+        {
+            float:left;
+            margin-left:-15px;
+        }
     }
 
 
