@@ -1,8 +1,16 @@
 {% extends "StacyMarkMainBundle::layout.html.twig" %}
 
-{% block title %}{{ painting.title }}{% endblock %}
-{% block metadescription %}{{ painting.title }} Painting by Stacy Mark{% endblock %}
+{% block title %}{{ painting.title }} | Painting by Stacy Mark{% endblock %}
+{% block metadescription %}{{ painting.title }} - selected paintings from artist Stacy Mark{% endblock %}
 {% block keywords %}{{ painting.title }}, art, Stacy Mark{% endblock %}
+{% block facebook %}
+    <meta property="og:title" content="{{ painting.title }} | Painting by Stacy Mark" />
+    <meta property="og:url" content="http://stacymark.com{{path('stacymark_paintings')}}/{{painting.slug}}" />
+    <meta property="og:description" content="{{ painting.title }} - selected paintings from artist Stacy Mark" />
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://www.facebook.com/stacy.mark.5" />
+    <meta property="og:image" content="http://stacymark.com{{ vich_uploader_asset(painting, 'image') }}" />
+{% endblock %}
 
 {% block content %}
 <div class="centered row page container">
@@ -17,7 +25,7 @@
                     {% endfor #}
                     {% for painting in paintings %}
                             {#<a href="{{path('stacymark_paintings')}}/{{painting.id}}">#}
-                            <a href="{{path('stacymark_paintings')}}/{{painting.title|replace({'%20': '-'})}}">
+                            <a href="{{path('stacymark_paintings')}}/{{painting.slug}}">
                                 <img src="{{ vich_uploader_asset(painting, 'thumb') }}" alt="{{ painting.title }}" width="50" height="50" />
                             </a>
                     {% endfor %}
@@ -31,8 +39,12 @@
     <section class="centered row info">
         <p class="ptg-info1 centered">{{ painting.title }} <span>| {{ painting.datefin }}</span></p>
         <p class="ptg-info2 centered">{{ painting.medium }} | {{ painting.dim }} | {{ painting.available }}</p>
+        <br/>
+        <div class="fb-like" data-href="https://stacymark.com{{path('stacymark_paintings')}}/{{painting.slug}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+        <br/>
         <p class="copyright centered">&copy; Stacy Mark. All Rights Reserved.</p>
     </section>
+
 </div>
 
 {% endblock %}

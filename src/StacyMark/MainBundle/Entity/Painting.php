@@ -82,6 +82,11 @@ class Painting
      */
     protected $available;
     
+    /**
+     * @ORM\Column (type="string")
+     */
+    protected $slug;
+    
 
     /**
      * Get id
@@ -206,6 +211,29 @@ class Painting
     public function getAvailable()
     {
         return $this->available;
+    }
+    
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Painting
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**

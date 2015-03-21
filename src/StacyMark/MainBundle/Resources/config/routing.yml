@@ -1,11 +1,11 @@
 stacymark_index:
     pattern:  /
-    defaults: { _controller: StacyMarkMainBundle:Page:index, title: 'Magic Suds' }
+    defaults: { _controller: StacyMarkMainBundle:Page:index, slug: 'magic-suds' }
     requirements:
       _method: GET|POST
 
 stacymark_paintings:
-  pattern: /painting/{title}
-  defaults: { _controller: StacyMarkMainBundle:Page:index, title: 'Magic Suds' }
+  pattern: /painting/{slug}
+  defaults: { _controller: StacyMarkMainBundle:Page:index, slug: 'magic-suds' }
   requirements:
       _method: GET|POST

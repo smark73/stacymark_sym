@@ -18,6 +18,7 @@ class PaintingFixtures implements FixtureInterface
         $painting1->setDim('30 x 30');
         $painting1->setDateFin('2008');
         $painting1->setAvailable('Sold');
+        $painting1->setSlug('something-in-the-air-shadow-of-cumulus');
         $manager->persist($painting1);
                 
         $painting2 = new Painting();
@@ -28,6 +29,7 @@ class PaintingFixtures implements FixtureInterface
         $painting2->setDim('18 x 18');
         $painting2->setDateFin('2008');
         $painting2->setAvailable('Sold');
+        $painting2->setSlug('standing-watch-over-things-unseen');
         $manager->persist($painting2);
         
         $manager->flush();        

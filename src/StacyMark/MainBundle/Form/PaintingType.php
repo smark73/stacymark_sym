@@ -18,6 +18,7 @@ class PaintingType extends AbstractType
             ->add('date_fin')
             ->add('dim')
             ->add('available')
+            ->add('slug')
         ;
     }
 

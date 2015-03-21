@@ -11,21 +11,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class PageController extends Controller
 { 
               
-       public function indexAction($title){
-           $title = str_replace('-', ' ', $title);
+       public function indexAction($slug){
 
            $em = $this->getDoctrine()
                    ->getManager();
            
            // selected painting
            $painting = $em->getRepository('StacyMarkMainBundle:Painting')
-                   ->findOneBy(array('title' => $title));
+                   ->findOneBy(array('slug' => $slug));
            
            //thumbs
            $paintings = $em->createQueryBuilder()
                    ->select(array('p'))
                    ->from('StacyMarkMainBundle:Painting', 'p')
-                   ->addOrderBy('p.title', 'ASC')
+                   ->addOrderBy('p.date_fin', 'DESC')
                    ->getQuery()
                    ->getResult();
            
