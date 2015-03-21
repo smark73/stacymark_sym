@@ -39,7 +39,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 html,
 body{ height:100%;overflow:auto}
 body {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;;
     font-size:0.8em;
     font-weight:bold;
     color:#999274;
@@ -60,10 +60,25 @@ a, a:visited{color:#413400}
 .img-responsive{width:100%;height:auto}
 .centered {display:block;margin:0 auto;text-align:center}
 .clear{clear:both}
-.krona{font-family: 'Krona One'}
-.hammersmith{font-family: 'Hammersmith One'}
+.montserrat{font-family: 'Montserrat', sans-serif;}
+.rocksalt{font-family: 'Rock Salt', cursive;}
+//.specialelite{font-family: 'Special Elite', cursive;}
+//.permmarker{font-family: 'Permanent Marker', cursive;}
+//.justanotherhand{font-family: 'Just Another Hand', cursive;}
 .light{color:#999274}
 .dark{color:#574f3b}
+.hdr-name{
+    font-family: 'Montserrat', cursive;
+    font-size:1em;
+    font-weight:normal;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+.hdr-paintings{
+    font-family: 'Rock Salt', cursive;
+    font-size:1.3em;
+    font-weight:normal;
+    text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
 header {
     margin:0 auto;
         // hide width 50% to center title when not showing menu tabs
@@ -79,9 +94,8 @@ div.hdr-title{
 }
 .hdr-title a{
     text-decoration:none;
-    font-size:14px;
-    text-shadow:1px 1px 1px #bfb7a7;
 }
+
 footer {
     text-align:center;
     color:#413400;
@@ -219,12 +233,12 @@ div.editor table td{padding:5px;border:1px dashed #554b32}
 #ptg-content{position:relative}
 #ptgs{margin:0 auto;text-align:center}
 .info{width:100%;background:#000;padding:1% 0 2%;clear:both}
-p.ptg-info1, p.ptg-info2 {font-weight:600;margin:1% auto;text-align:center}
-p.ptg-info1 {color:#e6d798;font-size:1.4em}
-p.ptg-info1 span{font-size:0.8em;color:#635729}
-p.ptg-info2 {color:#635729;font-size:1em}
+p.ptg-info1, p.ptg-info2 {margin:1% auto;text-align:center}
+p.ptg-info1 {color:#e6d798;font-size:1.2em;font-weight:400}
+p.ptg-info1 span{color:#635729;font-size:1.2em;font-family: 'Rock Salt', cursive;font-weight:400;}
+p.ptg-info2 {color:#635729;font-size:1em;font-weight:400}
 #ptgs img{margin:0 1%;max-width:600px;max-height:600px;margin-bottom:1%}
-.copyright{font-size:0.9em;font-weight:400;color:#333;margin:1% auto}
+.copyright{font-weight:400;color:#333;margin:1% auto;font-size:0.8em;font-weight:400;}
 
 /*-----------------------------------------------------------------------------------------*/
 
