@@ -10,6 +10,7 @@
     <meta property="og:type" content="article" />
     <meta property="article:author" content="https://www.facebook.com/stacy.mark.5" />
     <meta property="og:image" content="http://stacymark.com{{ vich_uploader_asset(painting, 'image') }}" />
+    <meta property="fb:app_id" content="1413430075637236" />
 {% endblock %}
 
 {% block content %}
@@ -39,8 +40,6 @@
     <section class="centered row info">
         <p class="ptg-info1 centered">{{ painting.title }} <span>| {{ painting.datefin }}</span></p>
         <p class="ptg-info2 centered">{{ painting.medium }} | {{ painting.dim }} | {{ painting.available }}</p>
-        <br/>
-        <div class="fb-like" data-href="https://stacymark.com{{path('stacymark_paintings')}}/{{painting.slug}}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
         <br/>
         <p class="copyright centered">&copy; Stacy Mark. All Rights Reserved.</p>
     </section>
