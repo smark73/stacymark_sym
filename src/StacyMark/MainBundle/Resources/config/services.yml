@@ -1,0 +1,7 @@
+parameters:
+#    stacy_mark_main.example.class: StacyMark\MainBundle\Example
+
+services:
+#    stacy_mark_main.example:
+#        class: %stacy_mark_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

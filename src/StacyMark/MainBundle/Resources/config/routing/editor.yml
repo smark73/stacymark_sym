@@ -1,0 +1,30 @@
+painting:
+    pattern:  /
+    defaults: { _controller: "StacyMarkMainBundle:Painting:index" }
+
+painting_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "StacyMarkMainBundle:Painting:show" }
+
+painting_new:
+    pattern:  /new
+    defaults: { _controller: "StacyMarkMainBundle:Painting:new" }
+
+painting_create:
+    pattern:  /create
+    defaults: { _controller: "StacyMarkMainBundle:Painting:create" }
+    requirements: { _method: post }
+
+painting_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "StacyMarkMainBundle:Painting:edit" }
+
+painting_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "StacyMarkMainBundle:Painting:update" }
+    requirements: { _method: post|put }
+
+painting_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "StacyMarkMainBundle:Painting:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,54 @@
+{% extends "StacyMarkMainBundle::layout.html.twig" %}
+
+{% block title %}{{ painting.title }} | Painting by Stacy Mark{% endblock %}
+{% block metadescription %}{{ painting.title }} - selected paintings from artist Stacy Mark{% endblock %}
+{% block keywords %}{{ painting.title }}, art, Stacy Mark{% endblock %}
+{% block facebook %}
+    <meta property="og:title" content="{{ painting.title }} | Painting by Stacy Mark" />
+    <meta property="og:url" content="http://stacymark.com{{path('stacymark_paintings')}}/{{painting.slug}}" />
+    <meta property="og:description" content="{{ painting.title }} - selected paintings from artist Stacy Mark" />
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://www.facebook.com/stacy.mark.5" />
+    <meta property="og:image" content="http://stacymark.com{{ vich_uploader_asset(painting, 'image') }}" />
+    <meta property="fb:app_id" content="1413430075637236" />
+{% endblock %}
+
+{% block content %}
+<div class="centered row page container">
+    <br class="clear"/>
+    <section id="ptg-content" class="centered gallery row">
+            <div class="centered">
+                <div class="thumbs row centered">
+                    {#for painting in paintings %}
+                            <a href="{{path('stacymark_paintings')}}/{{painting.id}}">
+                                <img src="{{asset(['gallery/', painting.thumb]|join)}}" alt="{{ painting.title }}" width="50" height="50" />
+                            </a>
+                    {% endfor #}
+                    {% for painting in paintings %}
+                            {#<a href="{{path('stacymark_paintings')}}/{{painting.id}}">#}
+                            <a href="{{path('stacymark_paintings')}}/{{painting.slug}}">
+                                <img src="{{ vich_uploader_asset(painting, 'thumb') }}" alt="{{ painting.title }}" width="50" height="50" />
+                            </a>
+                    {% endfor %}
+                </div>
+                <br class="clear"/>
+                <div id="ptgs" class="row centered">
+                    <img src="{{ vich_uploader_asset(painting, 'image') }}" alt="{{ painting.title }}" class="img-responsive">
+                </div>
+            </div>
+    </section>
+    <section class="centered row info">
+        <p class="ptg-info1 centered">{{ painting.title }} <span>| {{ painting.datefin }}</span></p>
+        <p class="ptg-info2 centered">{{ painting.medium }} | {{ painting.dim }} | {{ painting.available }}</p>
+        <br/>
+        <p class="copyright centered">&copy; Stacy Mark. All Rights Reserved.</p>
+    </section>
+
+</div>
+
+{% endblock %}
+{% block js_btm %}
+    {{ parent() }}
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('scripts/jquery.validate.min.js') }}"></script>
+{% endblock %}
